@@ -14,12 +14,17 @@ class PlacesDetailScreen extends StatelessWidget {
             color: Theme.of(context).colorScheme.onSurface,
           ),),
       ),
-      body: Center(
-        child: Text(
-          'Details of the selected place will be shown here.',
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
+      body: Stack(
+        children: [
+          Image.file(
+            place.imagePath!,
+            width: double.infinity,
+            height: double.infinity,
+            fit: BoxFit.cover,
+          ),
+        ],
       ),
+      
     );
   }
 }
